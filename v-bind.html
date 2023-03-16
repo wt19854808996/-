@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <div id="app">
+        
+      
+        <img :src="img"  alt=""  @click="changeactive"  :title="imgtitle" :class="{active:isactive} ">
+
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                
+                
+                img:"./images/desktop_3.jpg",
+                imgtitle:'显示图片',
+                isactive:false
+            },
+            methods:{
+               
+                changeactive:function(){
+                    this.isactive=!isactive
+                }
+            
+            }
+        })
+    </script>
+</body>
+</html>
